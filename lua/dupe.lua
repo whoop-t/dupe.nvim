@@ -4,8 +4,7 @@ local api = require("dupe.api")
 
 ---@class Config
 ---@field opt string Your config option
-local config = {
-}
+local config = {}
 
 ---@class
 local M = {}
@@ -22,6 +21,11 @@ end
 
 M.show_line_delete_registers = function()
   local lines = api.get_line_delete_registers()
+  return ui.create_float_window(lines)
+end
+
+M.show_all_registers = function()
+  local lines = api.get_all_registers()
   return ui.create_float_window(lines)
 end
 

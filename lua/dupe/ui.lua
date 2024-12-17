@@ -1,3 +1,5 @@
+local utils = require("dupe.utils")
+
 ---@class CustomModule
 local M = {}
 
@@ -50,7 +52,17 @@ M.create_float_window = function(lines)
     M.close_float(buf, float)
 
     -- Paste the selected register
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('"' .. line_number .. "p", true, true, true), "n", true)
+    local letter_reg
+    if line_number >= 9 then
+      letter_reg = string.char(line_number + utils.string_byte_offset)
+    end
+    local reg
+    if letter_reg then
+      reg = letter_reg
+    else
+      reg = line_number
+    end
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('"' .. reg .. "p", true, true, true), "n", true)
   end, { buffer = buf, silent = true })
 end
 
