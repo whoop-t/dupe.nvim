@@ -4,6 +4,8 @@
 Table of Contents                         *my-template-docs-table-of-contents*
 
 1. dupe.nvim                                      |my-template-docs-dupe.nvim|
+  - Install                               |my-template-docs-dupe.nvim-install|
+  - Commands                             |my-template-docs-dupe.nvim-commands|
   - TODO                                     |my-template-docs-dupe.nvim-todo|
 2. Links                                              |my-template-docs-links|
 
@@ -13,6 +15,32 @@ Table of Contents                         *my-template-docs-table-of-contents*
 
 
 Delete and yank register menus for neovim.
+
+
+  **Note:** This is in active development and subject to change.
+
+INSTALL                                   *my-template-docs-dupe.nvim-install*
+
+>lua
+    -- lazy
+    {
+      "whoop-t/dupe.nvim",
+      opts = {}
+    }
+<
+
+
+COMMANDS                                 *my-template-docs-dupe.nvim-commands*
+
+These commands will open a menu that allow selection of a register to paste
+
+>lua
+    -- Show all registers and their contents
+    :DupeShowAll
+        
+    -- Show only line deletes
+    :DupeShowLineDeletes
+<
 
 
 TODO                                         *my-template-docs-dupe.nvim-todo*
