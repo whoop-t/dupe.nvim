@@ -24,9 +24,6 @@ These commands will open a menu that allow selection of a register to paste
 -- Show all registers and their contents
 :DupeShowAll
     
--- Show only line deletes
-:DupeShowLineDeletes
-    
 -- Clear all registers
 :DupeClearAll
 ```
