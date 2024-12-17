@@ -1,13 +1,13 @@
 -- main module file
-local module = require("dupe.module")
+local ui = require("dupe.ui")
+local api = require("dupe.api")
 
 ---@class Config
 ---@field opt string Your config option
 local config = {
-  opt = "Hello!",
 }
 
----@class MyModule
+---@class
 local M = {}
 
 ---@type Config
@@ -20,8 +20,9 @@ M.setup = function(args)
   M.config = vim.tbl_deep_extend("force", M.config, args or {})
 end
 
-M.hello = function()
-  return module.my_first_function(M.config.opt)
+M.show_current_registers = function()
+  local lines = api.get_one_through_nine_regs()
+  return ui.create_float_window(lines)
 end
 
 return M

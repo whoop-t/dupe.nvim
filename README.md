@@ -4,3 +4,7 @@
 ![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)
 
 Copy paste more efficiently in neovim.
+
+## TODO
+
+1. IDK yet
