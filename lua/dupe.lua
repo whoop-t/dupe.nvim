@@ -20,8 +20,8 @@ M.setup = function(args)
   M.config = vim.tbl_deep_extend("force", M.config, args or {})
 end
 
-M.show_current_registers = function()
-  local lines = api.get_one_through_nine_regs()
+M.show_line_delete_registers = function()
+  local lines = api.get_line_delete_registers()
   return ui.create_float_window(lines)
 end
 

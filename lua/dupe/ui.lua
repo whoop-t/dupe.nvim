@@ -50,7 +50,7 @@ M.create_float_window = function(lines)
     M.close_float(buf, float)
 
     -- Paste the selected register
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('"' ..  line_number .. "p", true, true, true), "n", true)
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('"' .. line_number .. "p", true, true, true), "n", true)
   end, { buffer = buf, silent = true })
 end
 
