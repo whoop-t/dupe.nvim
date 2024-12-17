@@ -15,19 +15,6 @@ M.get_all_registers = function()
   return regs
 end
 
-M.get_line_delete_registers = function()
-  local regs = {}
-  for i = 1, 9 do
-    -- Get contents of register
-    local contents = vim.fn.getreg(tostring(i))
-
-    local line = utils.format_line(contents)
-    table.insert(regs, line)
-  end
-
-  return regs
-end
-
 M.clear_all_registers = function()
   for _, reg in ipairs(utils.registers) do
     vim.fn.setreg(reg, "")
