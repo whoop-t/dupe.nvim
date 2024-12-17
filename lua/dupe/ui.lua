@@ -52,15 +52,11 @@ M.create_float_window = function(lines)
     M.close_float(buf, float)
 
     -- Paste the selected register
-    local letter_reg
-    if line_number >= 9 then
-      letter_reg = string.char(line_number + utils.string_byte_offset)
-    end
     local reg
-    if letter_reg then
-      reg = letter_reg
-    else
-      reg = line_number
+    for i, value in ipairs(utils.registers) do
+      if i == line_number then
+        reg = value
+      end
     end
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('"' .. reg .. "p", true, true, true), "n", true)
   end, { buffer = buf, silent = true })
