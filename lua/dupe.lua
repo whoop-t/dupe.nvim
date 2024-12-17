@@ -29,4 +29,8 @@ M.show_all_registers = function()
   return ui.create_float_window(lines)
 end
 
+M.clear_all_registers = function()
+  api.clear_all_registers()
+end
+
 return M
