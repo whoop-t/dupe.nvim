@@ -43,11 +43,13 @@ M.create_float_window = function(lines)
   end, { buffer = buf, silent = true })
 
   vim.keymap.set("n", "<CR>", function()
+    -- Get cursor line number while in the float window
     local line_number = vim.api.nvim_win_get_cursor(0)[1]
 
-    -- Close the floating window
+    -- Close the floating window before pasting
     M.close_float(buf, float)
 
+    -- Paste the selected register
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('"' ..  line_number .. "p", true, true, true), "n", true)
   end, { buffer = buf, silent = true })
 end
