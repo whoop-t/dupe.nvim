@@ -5,6 +5,29 @@
 
 Delete and yank register menus for neovim.
 
+> **Note:** This is in active development and subject to change.
+
+## Install
+```lua
+-- lazy
+{
+  "whoop-t/dupe.nvim",
+  opts = {}
+}
+```
+
+## Commands
+
+These commands will open a menu that allow selection of a register to paste
+
+```lua
+-- Show all registers and their contents
+:DupeShowAll
+    
+-- Show only line deletes
+:DupeShowLineDeletes
+```
+
 ## TODO
 
 1. Allow for range pasting(delete range and then paste from selected register)
