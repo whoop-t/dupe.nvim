@@ -5,8 +5,6 @@ local M = {}
 
 local all_registers_length = 35
 
--- This is what needs to be added to the index to start getting a-z registers
-
 M.get_all_registers = function()
   local regs = {}
   for i = 1, all_registers_length do
