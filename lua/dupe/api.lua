@@ -77,7 +77,6 @@ M.clear_all_registers = function()
     "y",
     "z",
     "-",
-    "+",
     "*",
   }) do
     vim.fn.setreg(reg, "")
