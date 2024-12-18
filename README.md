@@ -25,8 +25,9 @@ Delete and yank register menus for neovim.
 :DupeClearAll
 ```
 
-## Uses
-You can open the menu and select a register to paste from in normal mode
+## How it works
+You can open the menu and select a register to paste from in normal mode and it will paste like using the "p"
+
 It also works with visual selection modes and will paste over whatever is visually selected
 
 ## TODO

@@ -79,8 +79,10 @@ M.delete_range = function()
 end
 
 M.paste_from_register_by_menu_selection = function(line_number, opts)
+  local paste_command = "p"
   -- If called in visual mode there will be a range selection
   if opts.range > 0 then
+    paste_command = "P"
     -- We want to delete the range first before pasting
     M.delete_range()
   end
@@ -92,7 +94,7 @@ M.paste_from_register_by_menu_selection = function(line_number, opts)
     end
   end
   -- using capital P to paste before cursor
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('"' .. reg .. "P", true, true, true), "n", true)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('"' .. reg .. paste_command, true, true, true), "n", true)
 end
 
 return M
