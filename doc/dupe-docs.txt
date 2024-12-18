@@ -72,7 +72,7 @@ TODO                                                *dupe-docs-dupe.nvim-todo*
 ==============================================================================
 2. Links                                                     *dupe-docs-links*
 
-1. *GitHub Workflow Status*: https://img.shields.io/github/actions/workflow/status/ellisonleao/nvim-plugin-template/lint-test.yml?branch=main&style=for-the-badge
+1. *GitHub Workflow Status*: https://img.shields.io/github/actions/workflow/status/whoop-t/dupe.nvim/lint-test.yml?branch=main&style=for-the-badge
 2. *Lua*: https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua
 3. *demo*: https://github.com/user-attachments/assets/c460ae24-00da-49dd-a88f-ee15eb61b9c8
 
