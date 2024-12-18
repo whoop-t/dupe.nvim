@@ -41,7 +41,7 @@ M.registers = {
   "-",
 }
 
-M.format_line = function(line)
+M.format_line = function(line, reg)
   -- Remove all whitespace at the start
   local whitespace_removed = string.gsub(line, "^%s+", "")
   -- Remove all new lines

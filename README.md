@@ -13,7 +13,14 @@ Delete and yank register menus for neovim.
 ```lua
 -- lazy
 {
-  "whoop-t/dupe.nvim"
+  "whoop-t/dupe.nvim",
+  -- Default settings
+  opts = {
+    -- Show line number like a normal window in the menu
+    show_line_numbers = false,
+    -- Show the register names in the menu
+    show_register_names = true,
+  },
 }
 ```
 

@@ -13,7 +13,7 @@ M.close_float = function(buf, win)
   end
 end
 
-M.create_float_window = function(regs, opts)
+M.create_float_window = function(regs, opts, config)
   -- Create a scratch buffer
   local buf = vim.api.nvim_create_buf(false, true)
 
@@ -33,7 +33,10 @@ M.create_float_window = function(regs, opts)
     border = "rounded",
   })
 
-  vim.api.nvim_set_option_value("number", true, { win = float })
+  -- This sets line numbers, but we are using custom markers
+  if config.show_line_numbers then
+    vim.api.nvim_set_option_value("number", true, { win = float })
+  end
 
   -- Set bindings for menu
   vim.keymap.set("n", "<ESC>", function()

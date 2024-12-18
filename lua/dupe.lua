@@ -4,9 +4,11 @@ local api = require("dupe.api")
 
 ---@class Config
 ---@field opt string Your config option
-local config = {}
+local config = {
+  show_line_numbers = false,
+  show_register_names = true
+}
 
----@class
 local M = {}
 
 ---@type Config
@@ -20,8 +22,8 @@ M.setup = function(args)
 end
 
 M.show_all_registers = function(opts)
-  local regs = api.get_all_registers()
-  return ui.create_float_window(regs, opts)
+  local regs = api.get_all_registers(M.config)
+  return ui.create_float_window(regs, opts, M.config)
 end
 
 return M
