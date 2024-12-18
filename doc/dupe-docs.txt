@@ -5,6 +5,7 @@ Table of Contents                                *dupe-docs-table-of-contents*
 
 1. dupe.nvim                                             |dupe-docs-dupe.nvim|
   - Install                                      |dupe-docs-dupe.nvim-install|
+  - Keymaps                                      |dupe-docs-dupe.nvim-keymaps|
   - Commands                                    |dupe-docs-dupe.nvim-commands|
   - How it works                            |dupe-docs-dupe.nvim-how-it-works|
   - TODO                                            |dupe-docs-dupe.nvim-todo|
@@ -26,8 +27,23 @@ INSTALL                                          *dupe-docs-dupe.nvim-install*
     -- lazy
     {
       "whoop-t/dupe.nvim",
-      opts = {}
+      keys = {
+        { "<leader>p", ":DupeShowAll<CR>", mode = {"n", "v"}, desc = "Dupe Show Menu" },
+      },
     }
+<
+
+
+KEYMAPS                                          *dupe-docs-dupe.nvim-keymaps*
+
+>lua
+    -- lazy
+      keys = {
+        { "<leader>p", ":DupeShowAll<CR>", mode = {"n", "v"}, desc = "Dupe Show Menu" },
+      }
+    
+    -- nvim
+    vim.keymap.set({'n', 'v'}, '<leader>p', ":DupeShowAll<CR>", { desc = "Dupe Show Menu" })
 <
 
 
