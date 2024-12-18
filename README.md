@@ -46,7 +46,7 @@ Only load plugin when keymap is pressed
 You can open the menu and select a register to paste from in normal mode and it will paste like using the "p"
 
 It also works with visual selection modes and will paste over whatever is visually selected
-> **NOTE** visual paste acts as black hole delete, it will not save the text that is deleted in a register
+> **Note:** visual mode paste acts as black hole delete, it will not save the text that is deleted in a register
 
 ## TODO
 
