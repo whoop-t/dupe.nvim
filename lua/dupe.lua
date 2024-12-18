@@ -6,7 +6,7 @@ local api = require("dupe.api")
 ---@field opt string Your config option
 local config = {
   show_line_numbers = false,
-  show_register_names = true
+  show_register_names = true,
 }
 
 local M = {}
