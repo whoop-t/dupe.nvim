@@ -13,22 +13,19 @@ Delete and yank register menus for neovim.
 ```lua
 -- lazy
 {
+  "whoop-t/dupe.nvim"
+}
+```
+
+Only load plugin when keymap is pressed
+```lua
+-- lazy
+{
   "whoop-t/dupe.nvim",
   keys = {
     { "<leader>p", ":DupeShowAll<CR>", mode = {"n", "v"}, desc = "Dupe Show Menu" },
   },
 }
-```
-
-## Keymaps
-```lua
--- lazy
-  keys = {
-    { "<leader>p", ":DupeShowAll<CR>", mode = {"n", "v"}, desc = "Dupe Show Menu" },
-  }
-
--- nvim
-vim.keymap.set({'n', 'v'}, '<leader>p', ":DupeShowAll<CR>", { desc = "Dupe Show Menu" })
 ```
 
 ## Commands
