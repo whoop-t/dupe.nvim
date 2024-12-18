@@ -6,7 +6,7 @@ Table of Contents                                *dupe-docs-table-of-contents*
 1. dupe.nvim                                             |dupe-docs-dupe.nvim|
   - Install                                      |dupe-docs-dupe.nvim-install|
   - Commands                                    |dupe-docs-dupe.nvim-commands|
-  - Uses                                            |dupe-docs-dupe.nvim-uses|
+  - How it works                            |dupe-docs-dupe.nvim-how-it-works|
   - TODO                                            |dupe-docs-dupe.nvim-todo|
 2. Links                                                     |dupe-docs-links|
 
@@ -42,11 +42,13 @@ COMMANDS                                        *dupe-docs-dupe.nvim-commands*
 <
 
 
-USES                                                *dupe-docs-dupe.nvim-uses*
+HOW IT WORKS                                *dupe-docs-dupe.nvim-how-it-works*
 
-You can open the menu and select a register to paste from in normal mode It
-also works with visual selection modes and will paste over whatever is visually
-selected
+You can open the menu and select a register to paste from in normal mode and it
+will paste like using the "p"
+
+It also works with visual selection modes and will paste over whatever is
+visually selected
 
 
 TODO                                                *dupe-docs-dupe.nvim-todo*
