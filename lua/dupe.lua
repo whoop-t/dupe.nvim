@@ -19,9 +19,9 @@ M.setup = function(args)
   M.config = vim.tbl_deep_extend("force", M.config, args or {})
 end
 
-M.show_all_registers = function()
-  local lines = api.get_all_registers()
-  return ui.create_float_window(lines)
+M.show_all_registers = function(opts)
+  local regs = api.get_all_registers()
+  return ui.create_float_window(regs, opts)
 end
 
 M.clear_all_registers = function()

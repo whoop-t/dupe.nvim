@@ -13,12 +13,12 @@ M.close_float = function(buf, win)
   end
 end
 
-M.create_float_window = function(lines)
+M.create_float_window = function(regs, opts)
   -- Create a scratch buffer
   local buf = vim.api.nvim_create_buf(false, true)
 
   -- Insert the lines into the buffer
-  vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+  vim.api.nvim_buf_set_lines(buf, 0, -1, false, regs)
 
   -- Open the buffer in a floating window for display
   local width = 50
@@ -52,13 +52,7 @@ M.create_float_window = function(lines)
     M.close_float(buf, float)
 
     -- Paste the selected register
-    local reg
-    for i, value in ipairs(utils.registers) do
-      if i == line_number then
-        reg = value
-      end
-    end
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('"' .. reg .. "p", true, true, true), "n", true)
+    utils.paste_from_register_by_menu_selection(line_number, opts)
   end, { buffer = buf, silent = true })
 end
 
