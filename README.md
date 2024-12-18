@@ -19,10 +19,8 @@ Delete and yank register menus for neovim.
 ## Commands
 ```lua
 -- Show all registers and their contents
+-- On selection, paste the contents
 :DupeShowAll
-    
--- Clear all registers
-:DupeClearAll
 ```
 
 ## How it works

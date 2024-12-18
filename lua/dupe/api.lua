@@ -15,10 +15,4 @@ M.get_all_registers = function()
   return regs
 end
 
-M.clear_all_registers = function()
-  for _, reg in ipairs(utils.registers) do
-    vim.fn.setreg(reg, "")
-  end
-end
-
 return M
