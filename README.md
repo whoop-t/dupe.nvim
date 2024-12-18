@@ -7,7 +7,7 @@ Delete and yank register menus for neovim.
 
 > **Note:** This is in active development and subject to change.
 
-![demo](https://github.com/user-attachments/assets/d71c80dd-a31a-4d90-985f-082459f64c20)
+![demo](https://github.com/user-attachments/assets/c460ae24-00da-49dd-a88f-ee15eb61b9c8)
 
 ## Install
 ```lua
